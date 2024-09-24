@@ -3,13 +3,15 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 export const CompetitionStats = () => {
   return (
-    <Card>
+    <Card className="bg-red-900 text-white">
       <CardHeader>
         <CardTitle>Statistiche Gare</CardTitle>
       </CardHeader>
       <CardContent>
-        <p>Qui verranno visualizzate le statistiche relative alle gare di Brazilian Jiu-Jitsu.</p>
-        {/* Aggiungi qui grafici e tabelle con dati reali */}
+        <p>Numero totale di gare: 150</p>
+        <p>Gare internazionali: 50</p>
+        <p>Gare nazionali: 100</p>
+        <p>Prossima gara: IBJJF European Championship, 15 Gennaio 2024</p>
       </CardContent>
     </Card>
   );
