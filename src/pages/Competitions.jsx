@@ -1,12 +1,13 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const Competitions = () => {
   const competitions = [
-    { name: "IBJJF World Championship", date: "2023-06-01", location: "California, USA" },
-    { name: "ADCC World Championship", date: "2023-09-15", location: "Las Vegas, USA" },
-    { name: "European Championship", date: "2023-01-20", location: "Lisbon, Portugal" },
+    { name: "IBJJF World Championship", date: "Annuale", location: "California, USA", link: "/ibjjf-world" },
+    { name: "ADCC World Championship", date: "Biennale", location: "Varie location", link: "/adcc-world" },
+    { name: "Who's Number One", date: "Varie date", location: "Varie location", link: "/wno" },
   ];
 
   return (
@@ -16,15 +17,17 @@ const Competitions = () => {
         <h1 className="text-4xl font-bold text-center mb-8 text-red-600">Gare di Brazilian Jiu-Jitsu</h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {competitions.map((comp, index) => (
-            <Card key={index} className="bg-red-900 text-white">
-              <CardHeader>
-                <CardTitle>{comp.name}</CardTitle>
-              </CardHeader>
-              <CardContent>
-                <p>Data: {comp.date}</p>
-                <p>Luogo: {comp.location}</p>
-              </CardContent>
-            </Card>
+            <Link to={comp.link} key={index}>
+              <Card className="bg-red-900 text-white hover:bg-red-800 transition-colors">
+                <CardHeader>
+                  <CardTitle>{comp.name}</CardTitle>
+                </CardHeader>
+                <CardContent>
+                  <p>Frequenza: {comp.date}</p>
+                  <p>Luogo: {comp.location}</p>
+                </CardContent>
+              </Card>
+            </Link>
           ))}
         </div>
       </main>

@@ -4,6 +4,9 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { navItems } from "./nav-items";
 import Athletes from "./pages/Athletes";
+import IBJJFWorld from "./pages/IBJJFWorld";
+import ADCCWorld from "./pages/ADCCWorld";
+import WNO from "./pages/WNO";
 
 const queryClient = new QueryClient();
 
@@ -17,6 +20,9 @@ const App = () => (
             <Route key={to} path={to} element={page} />
           ))}
           <Route path="/athletes/:id" element={<Athletes />} />
+          <Route path="/ibjjf-world" element={<IBJJFWorld />} />
+          <Route path="/adcc-world" element={<ADCCWorld />} />
+          <Route path="/wno" element={<WNO />} />
         </Routes>
       </BrowserRouter>
     </TooltipProvider>
