@@ -1,10 +1,8 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
-import { CompetitionStats } from '../components/CompetitionStats';
-import { AthleteStats } from '../components/AthleteStats';
-import { TeamStats } from '../components/TeamStats';
 import { TopAthletes } from '../components/TopAthletes';
+import BannerSection from '../components/BannerSection';
+import Dashboard from '../components/Dashboard';
 
 const Index = () => {
   return (
@@ -13,17 +11,11 @@ const Index = () => {
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-6xl font-bold text-center mb-8 text-red-600">JiuJitsuData</h1>
         <TopAthletes />
-        <div className="space-y-12 mt-12">
-          <Link to="/competitions" className="block">
-            <CompetitionStats />
-          </Link>
-          <Link to="/athletes" className="block">
-            <AthleteStats />
-          </Link>
-          <Link to="/teams" className="block">
-            <TeamStats />
-          </Link>
+        <div className="mt-12">
+          <h2 className="text-3xl font-bold mb-4 text-red-600">Esplora le Statistiche</h2>
+          <BannerSection />
         </div>
+        <Dashboard />
       </main>
     </div>
   );
