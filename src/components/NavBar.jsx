@@ -1,6 +1,7 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
 import { ArrowLeft } from 'lucide-react';
+import { SearchBar } from './SearchBar';
 
 export const NavBar = () => {
   const navigate = useNavigate();
@@ -17,6 +18,9 @@ export const NavBar = () => {
             <ArrowLeft size={24} />
           </button>
           <Link to="/" className="text-2xl font-bold">JiuJitsuData</Link>
+        </div>
+        <div className="flex-grow mx-4">
+          <SearchBar />
         </div>
         <ul className="flex space-x-4">
           <li><Link to="/competitions" className="hover:text-red-300">Gare</Link></li>

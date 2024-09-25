@@ -10,19 +10,19 @@ import {
 } from "@/components/ui/carousel";
 
 const athletes = [
-  { id: 1, name: "Gordon Ryan", image: "/gordon-ryan.jpg" },
-  { id: 2, name: "Tye Ruotolo", image: "/placeholder.svg" },
-  { id: 3, name: "Kade Ruotolo", image: "/placeholder.svg" },
-  { id: 4, name: "Levi Jones Leary", image: "/placeholder.svg" },
-  { id: 5, name: "Mica Galvao", image: "/placeholder.svg" },
-  { id: 6, name: "Giancarlo Bodoni", image: "/placeholder.svg" },
-  { id: 7, name: "Kaynan Duarte", image: "/placeholder.svg" },
+  { id: 1, name: "Gordon Ryan", image: "/gordon-ryan.jpg", wins: 95, losses: 5, team: "New Wave Jiu-Jitsu" },
+  { id: 2, name: "Tye Ruotolo", image: "/placeholder.svg", wins: 80, losses: 10, team: "Atos Jiu-Jitsu" },
+  { id: 3, name: "Kade Ruotolo", image: "/placeholder.svg", wins: 82, losses: 8, team: "Atos Jiu-Jitsu" },
+  { id: 4, name: "Levi Jones Leary", image: "/placeholder.svg", wins: 75, losses: 15, team: "Unity Jiu-Jitsu" },
+  { id: 5, name: "Mica Galvao", image: "/placeholder.svg", wins: 85, losses: 7, team: "Manaus Jiu-Jitsu" },
+  { id: 6, name: "Giancarlo Bodoni", image: "/placeholder.svg", wins: 70, losses: 20, team: "New Wave Jiu-Jitsu" },
+  { id: 7, name: "Kaynan Duarte", image: "/placeholder.svg", wins: 88, losses: 12, team: "Atos Jiu-Jitsu" },
 ];
 
 export const TopAthletes = () => {
   return (
     <div className="w-full">
-      <h2 className="text-2xl font-bold mb-4 text-red-600">Top Searched Athletes</h2>
+      <h2 className="text-2xl font-bold mb-4 text-red-600">Atleti più ricercati</h2>
       <Carousel className="w-full max-w-xs mx-auto">
         <CarouselContent>
           {athletes.map((athlete) => (
@@ -36,6 +36,9 @@ export const TopAthletes = () => {
                       className="w-32 h-32 rounded-full mb-4 mx-auto object-cover"
                     />
                     <h3 className="text-xl font-semibold text-white">{athlete.name}</h3>
+                    <p className="text-white">Team: {athlete.team}</p>
+                    <p className="text-white">Vittorie: {athlete.wins}</p>
+                    <p className="text-white">Sconfitte: {athlete.losses}</p>
                   </CardContent>
                 </Card>
               </Link>
