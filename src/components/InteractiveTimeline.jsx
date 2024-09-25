@@ -1,6 +1,5 @@
 import React from 'react';
-import { Timeline, TimelineItem, TimelineConnector, TimelineContent, TimelineDot, TimelineSeparator } from '@mui/lab';
-import { Typography, Paper } from '@mui/material';
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
 const competitions = [
   { year: 2023, name: 'IBJJF World Championship', result: 'Gold' },
@@ -11,30 +10,27 @@ const competitions = [
 
 const InteractiveTimeline = () => {
   return (
-    <Paper className="p-4 bg-navy-900 text-white">
-      <Typography variant="h6" className="mb-4">Risultati Atleti nelle Competizioni Annuali</Typography>
-      <Timeline position="alternate">
-        {competitions.map((comp, index) => (
-          <TimelineItem key={index}>
-            <TimelineSeparator>
-              <TimelineDot color={comp.result === 'Gold' ? 'success' : comp.result === 'Silver' ? 'primary' : 'secondary'} />
-              <TimelineConnector />
-            </TimelineSeparator>
-            <TimelineContent>
-              <Paper elevation={3} className="p-2 bg-navy-800">
-                <Typography variant="h6" component="h1">
-                  {comp.year}
-                </Typography>
-                <Typography>{comp.name}</Typography>
-                <Typography color={comp.result === 'Gold' ? 'lime' : comp.result === 'Silver' ? 'gray' : 'red'}>
+    <Card className="bg-navy-900 text-white">
+      <CardHeader>
+        <CardTitle>Risultati Atleti nelle Competizioni Annuali</CardTitle>
+      </CardHeader>
+      <CardContent>
+        <div className="space-y-4">
+          {competitions.map((comp, index) => (
+            <div key={index} className="flex items-center space-x-4">
+              <div className={`w-4 h-4 rounded-full ${comp.result === 'Gold' ? 'bg-lime-500' : comp.result === 'Silver' ? 'bg-gray-400' : 'bg-red-500'}`}></div>
+              <div className="flex-1">
+                <p className="font-bold">{comp.year}</p>
+                <p>{comp.name}</p>
+                <p className={comp.result === 'Gold' ? 'text-lime-500' : comp.result === 'Silver' ? 'text-gray-400' : 'text-red-500'}>
                   {comp.result}
-                </Typography>
-              </Paper>
-            </TimelineContent>
-          </TimelineItem>
-        ))}
-      </Timeline>
-    </Paper>
+                </p>
+              </div>
+            </div>
+          ))}
+        </div>
+      </CardContent>
+    </Card>
   );
 };
 

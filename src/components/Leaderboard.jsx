@@ -1,5 +1,6 @@
 import React from 'react';
-import { Table, TableBody, TableCell, TableContainer, TableHead, TableRow, Paper, Typography } from '@mui/material';
+import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
+import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const athletes = [
   { rank: 1, name: 'Gordon Ryan', points: 1000, recentResult: 'Gold at ADCC 2022' },
@@ -11,18 +12,20 @@ const athletes = [
 
 const Leaderboard = () => {
   return (
-    <Paper className="p-4 bg-navy-900 text-white">
-      <Typography variant="h6" className="mb-4">Leaderboard Atleti</Typography>
-      <TableContainer component={Paper}>
+    <Card className="bg-navy-900 text-white">
+      <CardHeader>
+        <CardTitle>Leaderboard Atleti</CardTitle>
+      </CardHeader>
+      <CardContent>
         <Table>
-          <TableHead>
+          <TableHeader>
             <TableRow className="bg-navy-800">
-              <TableCell className="text-white">Rank</TableCell>
-              <TableCell className="text-white">Nome</TableCell>
-              <TableCell className="text-white">Punti</TableCell>
-              <TableCell className="text-white">Risultato Recente</TableCell>
+              <TableHead className="text-white">Rank</TableHead>
+              <TableHead className="text-white">Nome</TableHead>
+              <TableHead className="text-white">Punti</TableHead>
+              <TableHead className="text-white">Risultato Recente</TableHead>
             </TableRow>
-          </TableHead>
+          </TableHeader>
           <TableBody>
             {athletes.map((athlete) => (
               <TableRow key={athlete.rank} className="hover:bg-navy-700">
@@ -34,8 +37,8 @@ const Leaderboard = () => {
             ))}
           </TableBody>
         </Table>
-      </TableContainer>
-    </Paper>
+      </CardContent>
+    </Card>
   );
 };
 
