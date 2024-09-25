@@ -12,23 +12,23 @@ const athletes = [
 
 const Leaderboard = () => {
   return (
-    <Card className="bg-navy-900 text-white">
+    <Card className="bg-navy text-white">
       <CardHeader>
-        <CardTitle>Leaderboard Atleti</CardTitle>
+        <CardTitle className="text-bright-red">Leaderboard Atleti</CardTitle>
       </CardHeader>
       <CardContent>
         <Table>
           <TableHeader>
-            <TableRow className="bg-navy-800">
-              <TableHead className="text-white">Rank</TableHead>
-              <TableHead className="text-white">Nome</TableHead>
-              <TableHead className="text-white">Punti</TableHead>
-              <TableHead className="text-white">Risultato Recente</TableHead>
+            <TableRow className="bg-light-gray">
+              <TableHead className="text-navy">Rank</TableHead>
+              <TableHead className="text-navy">Nome</TableHead>
+              <TableHead className="text-navy">Punti</TableHead>
+              <TableHead className="text-navy">Risultato Recente</TableHead>
             </TableRow>
           </TableHeader>
           <TableBody>
             {athletes.map((athlete) => (
-              <TableRow key={athlete.rank} className="hover:bg-navy-700">
+              <TableRow key={athlete.rank} className="hover:bg-bright-red hover:bg-opacity-20">
                 <TableCell className="text-white">{athlete.rank}</TableCell>
                 <TableCell className="text-white">{athlete.name}</TableCell>
                 <TableCell className="text-white">{athlete.points}</TableCell>

@@ -10,19 +10,19 @@ const Teams = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-navy-900 text-white">
+    <div className="min-h-screen bg-navy text-white">
       <NavBar />
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8 text-red-500">Team di Brazilian Jiu-Jitsu</h1>
+        <h1 className="text-4xl font-bold text-center mb-8 text-bright-red">Team di Brazilian Jiu-Jitsu</h1>
         <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
           {teams.map((team, index) => (
-            <Card key={index} className="bg-navy-800 text-white">
+            <Card key={index} className="bg-light-gray text-navy">
               <CardHeader>
-                <CardTitle className="text-red-500">{team.name}</CardTitle>
+                <CardTitle className="text-bright-red">{team.name}</CardTitle>
               </CardHeader>
               <CardContent>
                 <p>Sede: {team.location}</p>
-                <p>Head Coach: <span className="text-lime-500">{team.headCoach}</span></p>
+                <p>Head Coach: <span className="text-lime">{team.headCoach}</span></p>
               </CardContent>
             </Card>
           ))}

@@ -11,21 +11,21 @@ export const NavBar = () => {
   };
 
   return (
-    <nav className="bg-red-900 text-white p-4">
+    <nav className="bg-navy text-white p-4">
       <div className="container mx-auto flex justify-between items-center">
         <div className="flex items-center">
-          <button onClick={handleGoBack} className="mr-4 hover:text-red-300">
+          <button onClick={handleGoBack} className="mr-4 hover:text-bright-red">
             <ArrowLeft size={24} />
           </button>
-          <Link to="/" className="text-2xl font-bold">JiuJitsuData</Link>
+          <Link to="/" className="text-2xl font-bold text-bright-red">JiuJitsuData</Link>
         </div>
         <div className="flex-grow mx-4">
           <SearchBar />
         </div>
         <ul className="flex space-x-4">
-          <li><Link to="/competitions" className="hover:text-red-300">Gare</Link></li>
-          <li><Link to="/athletes" className="hover:text-red-300">Atleti</Link></li>
-          <li><Link to="/teams" className="hover:text-red-300">Team</Link></li>
+          <li><Link to="/competitions" className="hover:text-bright-red">Gare</Link></li>
+          <li><Link to="/athletes" className="hover:text-bright-red">Atleti</Link></li>
+          <li><Link to="/teams" className="hover:text-bright-red">Team</Link></li>
         </ul>
       </div>
     </nav>

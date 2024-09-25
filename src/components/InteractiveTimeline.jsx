@@ -10,19 +10,19 @@ const competitions = [
 
 const InteractiveTimeline = () => {
   return (
-    <Card className="bg-navy-900 text-white">
+    <Card className="bg-navy text-white">
       <CardHeader>
-        <CardTitle>Risultati Atleti nelle Competizioni Annuali</CardTitle>
+        <CardTitle className="text-bright-red">Risultati Atleti nelle Competizioni Annuali</CardTitle>
       </CardHeader>
       <CardContent>
         <div className="space-y-4">
           {competitions.map((comp, index) => (
             <div key={index} className="flex items-center space-x-4">
-              <div className={`w-4 h-4 rounded-full ${comp.result === 'Gold' ? 'bg-lime-500' : comp.result === 'Silver' ? 'bg-gray-400' : 'bg-red-500'}`}></div>
+              <div className={`w-4 h-4 rounded-full ${comp.result === 'Gold' ? 'bg-lime' : comp.result === 'Silver' ? 'bg-light-gray' : 'bg-bright-red'}`}></div>
               <div className="flex-1">
                 <p className="font-bold">{comp.year}</p>
                 <p>{comp.name}</p>
-                <p className={comp.result === 'Gold' ? 'text-lime-500' : comp.result === 'Silver' ? 'text-gray-400' : 'text-red-500'}>
+                <p className={comp.result === 'Gold' ? 'text-lime' : comp.result === 'Silver' ? 'text-light-gray' : 'text-bright-red'}>
                   {comp.result}
                 </p>
               </div>

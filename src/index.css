@@ -59,23 +59,35 @@
   }
 }
 
-/* Custom styles for JiuJitsuData */
-.bg-navy-900 {
+/* Custom colors for JiuJitsuData */
+.bg-navy {
   background-color: #001f3f;
 }
 
-.bg-navy-800 {
-  background-color: #003366;
+.text-navy {
+  color: #001f3f;
 }
 
-.bg-navy-700 {
-  background-color: #004080;
+.bg-bright-red {
+  background-color: #FF4136;
+}
+
+.text-bright-red {
+  color: #FF4136;
+}
+
+.bg-light-gray {
+  background-color: #DDDDDD;
+}
+
+.text-light-gray {
+  color: #DDDDDD;
+}
+
+.bg-lime {
+  background-color: #01FF70;
 }
 
 .text-lime {
   color: #01FF70;
-}
-
-.hover\:bg-navy-700:hover {
-  background-color: #004080;
 }
