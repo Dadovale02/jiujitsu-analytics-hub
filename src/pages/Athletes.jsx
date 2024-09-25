@@ -14,13 +14,13 @@ const athletesData = [
 ];
 
 const AthleteDetails = ({ athlete }) => (
-  <Card className="bg-red-900 text-white">
+  <Card className="bg-navy-800 text-white">
     <CardHeader>
-      <CardTitle>{athlete.name}</CardTitle>
+      <CardTitle className="text-red-500">{athlete.name}</CardTitle>
     </CardHeader>
     <CardContent>
       <img src={athlete.image} alt={athlete.name} className="w-64 h-64 rounded-full mb-4 mx-auto object-cover" />
-      <p>Soprannome: {athlete.nickname}</p>
+      <p>Soprannome: <span className="text-lime-500">{athlete.nickname}</span></p>
       <p>Team: {athlete.team}</p>
       <p>Categoria: {athlete.weight}</p>
     </CardContent>
@@ -32,10 +32,10 @@ const Athletes = () => {
   const athleteId = parseInt(id);
 
   return (
-    <div className="min-h-screen bg-black text-red-500">
+    <div className="min-h-screen bg-navy-900 text-white">
       <NavBar />
       <main className="container mx-auto px-4 py-8">
-        <h1 className="text-4xl font-bold text-center mb-8 text-red-600">Atleti di Brazilian Jiu-Jitsu</h1>
+        <h1 className="text-4xl font-bold text-center mb-8 text-red-500">Atleti di Brazilian Jiu-Jitsu</h1>
         {athleteId ? (
           <AthleteDetails athlete={athletesData.find(a => a.id === athleteId)} />
         ) : (
