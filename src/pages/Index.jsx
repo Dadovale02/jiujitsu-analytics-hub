@@ -8,7 +8,7 @@ import Leaderboard from '../components/Leaderboard';
 
 const Index = () => {
   return (
-    <div className="min-h-screen bg-navy text-white">
+    <div className="min-h-screen bg-white text-navy">
       <NavBar />
       <main className="container mx-auto px-4 py-8">
         <h1 className="text-6xl font-bold text-center mb-8 text-bright-red">JiuJitsuData</h1>

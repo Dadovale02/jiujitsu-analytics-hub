@@ -36,16 +36,16 @@ export const SearchBar = () => {
           placeholder="Cerca atleti, team o gare..."
           value={searchTerm}
           onChange={handleSearch}
-          className="w-full"
+          className="w-full bg-white text-black placeholder-gray-500"
         />
-        <Button type="submit" className="ml-2">
+        <Button type="submit" className="ml-2 bg-bright-red text-white hover:bg-red-600">
           <Search className="h-4 w-4" />
         </Button>
       </div>
       {results.length > 0 && (
-        <ul className="absolute z-10 w-full bg-white border border-gray-300 mt-1 rounded-md shadow-lg">
+        <ul className="absolute z-10 w-full bg-white border border-light-gray mt-1 rounded-md shadow-lg">
           {results.map(item => (
-            <li key={item.id} className="px-4 py-2 hover:bg-gray-100 cursor-pointer">
+            <li key={item.id} className="px-4 py-2 hover:bg-light-gray cursor-pointer text-navy">
               {item.name} - {item.type}
             </li>
           ))}
