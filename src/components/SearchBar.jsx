@@ -2,17 +2,19 @@ import React, { useState } from 'react';
 import { Search } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+import { useNavigate } from 'react-router-dom';
 
 const mockData = [
-  { id: 1, name: "Gordon Ryan", type: "Athlete" },
-  { id: 2, name: "Atos Jiu-Jitsu", type: "Team" },
-  { id: 3, name: "IBJJF World Championship", type: "Competition" },
-  // Add more mock data as needed
+  { id: 1, name: "Gordon Ryan", type: "Athlete", url: "/athletes/1" },
+  { id: 2, name: "Atos Jiu-Jitsu", type: "Team", url: "/teams/atos" },
+  { id: 3, name: "IBJJF World Championship", type: "Competition", url: "/competitions/ibjjf-world" },
+  // Aggiungi altri dati mock secondo necessità
 ];
 
 export const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
+  const navigate = useNavigate();
 
   const handleSearch = (event) => {
     const value = event.target.value;
@@ -26,6 +28,12 @@ export const SearchBar = () => {
     } else {
       setResults([]);
     }
+  };
+
+  const handleResultClick = (url) => {
+    navigate(url);
+    setSearchTerm('');
+    setResults([]);
   };
 
   return (
@@ -45,7 +53,11 @@ export const SearchBar = () => {
       {results.length > 0 && (
         <ul className="absolute z-10 w-full bg-white border border-light-gray mt-1 rounded-md shadow-lg">
           {results.map(item => (
-            <li key={item.id} className="px-4 py-2 hover:bg-light-gray cursor-pointer text-navy">
+            <li 
+              key={item.id} 
+              className="px-4 py-2 hover:bg-light-gray cursor-pointer text-navy"
+              onClick={() => handleResultClick(item.url)}
+            >
               {item.name} - {item.type}
             </li>
           ))}
