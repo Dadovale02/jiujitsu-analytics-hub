@@ -3,14 +3,15 @@ import { useParams, Link } from 'react-router-dom';
 import { NavBar } from './NavBar';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Instagram, Facebook, Twitter, Globe } from 'lucide-react';
+import { useTeamData } from '../hooks/useTeamData';
 
-const TeamProfile = ({ teamsData }) => {
+const TeamProfile = () => {
   const { id } = useParams();
-  const team = teamsData.find(t => t.id === id);
+  const { data: team, isLoading, error } = useTeamData(id);
 
-  if (!team) {
-    return <div className="text-white">Team non trovato</div>;
-  }
+  if (isLoading) return <div className="text-white">Loading...</div>;
+  if (error) return <div className="text-white">Error: {error.message}</div>;
+  if (!team) return <div className="text-white">Team non trovato</div>;
 
   return (
     <div className="min-h-screen bg-navy text-white">
@@ -37,8 +38,8 @@ const TeamProfile = ({ teamsData }) => {
 
             <h2 className="text-2xl font-semibold mt-6 mb-2 text-bright-red">Atleti Principali</h2>
             <ul className="list-disc list-inside">
-              {team.mainAthletes.map((athlete, index) => (
-                <li key={index}>
+              {team.mainAthletes.map((athlete) => (
+                <li key={athlete.id}>
                   <Link to={`/athletes/${athlete.id}`} className="text-lime hover:underline">
                     {athlete.name}
                   </Link>
