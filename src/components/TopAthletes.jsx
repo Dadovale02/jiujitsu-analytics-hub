@@ -30,26 +30,26 @@ export const TopAthletes = () => {
       <Carousel className="w-full h-full">
         <CarouselContent>
           {athletes.map((athlete) => (
-            <CarouselItem key={athlete.id} className="md:basis-1/2 lg:basis-1/3">
+            <CarouselItem key={athlete.id} className="md:basis-1/3">
               <Link to={`/athletes/${athlete.id}`}>
                 <Card className="bg-red-900 h-full">
-                  <CardContent className="flex flex-col items-center p-4">
+                  <CardContent className="flex flex-col items-center p-6">
                     <img
                       src={athlete.image}
                       alt={athlete.name}
-                      className="w-24 h-24 rounded-full mb-2 mx-auto object-cover"
+                      className="w-32 h-32 rounded-full mb-4 mx-auto object-cover"
                     />
-                    <h3 className="text-lg font-semibold text-white">{athlete.name}</h3>
-                    <p className="text-sm text-white">Team: {athlete.team}</p>
-                    <p className="text-sm text-white">Vittorie: {athlete.wins}</p>
-                    <p className="text-sm text-white">Sconfitte: {athlete.losses}</p>
+                    <h3 className="text-xl font-semibold text-white">{athlete.name}</h3>
+                    <p className="text-white">Team: {athlete.team}</p>
+                    <p className="text-white">Vittorie: {athlete.wins}</p>
+                    <p className="text-white">Sconfitte: {athlete.losses}</p>
                   </CardContent>
                 </Card>
               </Link>
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="flex justify-center mt-2">
+        <div className="flex justify-center mt-4 space-x-2">
           <CarouselPrevious />
           <CarouselNext />
         </div>
