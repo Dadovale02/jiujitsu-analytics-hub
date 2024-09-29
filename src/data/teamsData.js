@@ -1,5 +1,34 @@
 export const teamsData = [
   {
+    id: "newwave",
+    name: "New Wave Jiu-Jitsu",
+    logo: "/path/to/newwave-logo.jpg",
+    foundedYear: 2021,
+    headquarters: "Austin, Texas, USA",
+    history: "New Wave Jiu-Jitsu was founded in 2021 by John Danaher and the DDS (Danaher Death Squad) after their split from Renzo Gracie Academy. The team quickly became known for their innovative approach to leg locks and submission-oriented grappling.",
+    mainAthletes: [
+      { id: 1, name: "Gordon Ryan" },
+      { id: 4, name: "Nicholas Meregali" },
+      { id: 10, name: "Giancarlo Bodoni" }
+    ],
+    achievements: [
+      "Multiple ADCC World Championship Titles",
+      "Numerous Who's Number One (WNO) Championships",
+      "Multiple Submission Underground (SUG) Titles"
+    ],
+    distinctiveTechniques: "New Wave is renowned for their systematic approach to leg locks, back attacks, and their philosophy of always seeking the submission.",
+    affiliatedAcademies: [
+      { name: "New Wave Jiu-Jitsu HQ", location: "Austin, Texas" },
+      { name: "B-Team Jiu-Jitsu", location: "Austin, Texas" }
+    ],
+    socialMedia: {
+      instagram: "newwavejiujitsu",
+      facebook: "newwavejiujitsu",
+      twitter: "newwavebjj"
+    },
+    website: "https://www.newwavejiujitsu.com"
+  },
+  {
     id: "atos",
     name: "Atos Jiu-Jitsu",
     logo: "/path/to/atos-logo.jpg",
@@ -7,10 +36,10 @@ export const teamsData = [
     headquarters: "San Diego, California, USA",
     history: "Atos Jiu-Jitsu was founded in 2008 by André Galvão and Ramon Lemos in Rio de Janeiro, Brazil. The team quickly rose to prominence, becoming one of the most successful competition teams in Brazilian Jiu-Jitsu.",
     mainAthletes: [
-      { id: "2", name: "André Galvão" },
-      { id: "6", name: "Tye Ruotolo" },
-      { id: "7", name: "Kade Ruotolo" },
-      { id: "11", name: "Kaynan Duarte" }
+      { id: 2, name: "André Galvão" },
+      { id: 6, name: "Tye Ruotolo" },
+      { id: 7, name: "Kade Ruotolo" },
+      { id: 11, name: "Kaynan Duarte" }
     ],
     achievements: [
       "Multiple IBJJF World Championship Team Titles",
@@ -31,35 +60,6 @@ export const teamsData = [
     website: "https://www.atosjiujitsuhq.com"
   },
   {
-    id: "newwave",
-    name: "New Wave Jiu-Jitsu",
-    logo: "/path/to/newwave-logo.jpg",
-    foundedYear: 2021,
-    headquarters: "Austin, Texas, USA",
-    history: "New Wave Jiu-Jitsu was founded in 2021 by John Danaher and the DDS (Danaher Death Squad) after their split from Renzo Gracie Academy. The team quickly became known for their innovative approach to leg locks and submission-oriented grappling.",
-    mainAthletes: [
-      { id: "1", name: "Gordon Ryan" },
-      { id: "4", name: "Nicholas Meregali" },
-      { id: "10", name: "Giancarlo Bodoni" }
-    ],
-    achievements: [
-      "Multiple ADCC World Championship Titles",
-      "Numerous Who's Number One (WNO) Championships",
-      "Multiple Submission Underground (SUG) Titles"
-    ],
-    distinctiveTechniques: "New Wave is renowned for their systematic approach to leg locks, back attacks, and their philosophy of always seeking the submission.",
-    affiliatedAcademies: [
-      { name: "New Wave Jiu-Jitsu HQ", location: "Austin, Texas" },
-      { name: "B-Team Jiu-Jitsu", location: "Austin, Texas" }
-    ],
-    socialMedia: {
-      instagram: "newwavejiujitsu",
-      facebook: "newwavejiujitsu",
-      twitter: "newwavebjj"
-    },
-    website: "https://www.newwavejiujitsu.com"
-  },
-  {
     id: "graciebarra",
     name: "Gracie Barra",
     logo: "/path/to/graciebarra-logo.jpg",
@@ -67,7 +67,7 @@ export const teamsData = [
     headquarters: "Irvine, California, USA",
     history: "Gracie Barra was founded in 1986 by Carlos Gracie Jr. in Rio de Janeiro, Brazil. It has since grown to become one of the largest and most widespread Brazilian Jiu-Jitsu organizations in the world.",
     mainAthletes: [
-      { id: "5", name: "Felipe Pena" }
+      { id: 5, name: "Felipe Pena" }
     ],
     achievements: [
       "Multiple IBJJF World Championship Team Titles",
@@ -95,7 +95,7 @@ export const teamsData = [
     headquarters: "Long Beach, California, USA",
     history: "Checkmat was founded in 2008 by Leo Vieira in Brazil. The team has quickly risen to prominence in the competitive BJJ scene, known for producing numerous world-class athletes.",
     mainAthletes: [
-      { id: "3", name: "Marcus Almeida" }
+      { id: 3, name: "Marcus Almeida" }
     ],
     achievements: [
       "Multiple IBJJF World Championship Team Titles",
@@ -123,7 +123,7 @@ export const teamsData = [
     headquarters: "New York City, New York, USA",
     history: "Unity Jiu-Jitsu was founded in 2013 by Murilo Santana in New York City. The team has quickly gained recognition for its competition success and innovative training methods.",
     mainAthletes: [
-      { id: "8", name: "Levi Jones Leary" }
+      { id: 8, name: "Levi Jones Leary" }
     ],
     achievements: [
       "Multiple IBJJF World Championship Medals",
@@ -150,7 +150,7 @@ export const teamsData = [
     headquarters: "Manaus, Amazonas, Brazil",
     history: "Manaus Jiu-Jitsu represents the collective BJJ community from the city of Manaus, known for producing numerous world-class grapplers. While not a formal team, it's recognized for the unique style and talent coming from this Amazonian city.",
     mainAthletes: [
-      { id: "9", name: "Mica Galvao" }
+      { id: 9, name: "Mica Galvao" }
     ],
     achievements: [
       "Multiple IBJJF World Championship Medals",
