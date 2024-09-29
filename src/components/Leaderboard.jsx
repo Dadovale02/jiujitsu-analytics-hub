@@ -3,11 +3,11 @@ import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 
 const athletes = [
-  { rank: 1, name: 'Gordon Ryan', points: 1000, recentResult: 'Gold at ADCC 2022' },
-  { rank: 2, name: 'André Galvão', points: 950, recentResult: 'Silver at IBJJF Worlds 2023' },
-  { rank: 3, name: 'Marcus Almeida', points: 900, recentResult: 'Gold at IBJJF Euros 2023' },
-  { rank: 4, name: 'Nicholas Meregali', points: 850, recentResult: 'Bronze at ADCC 2022' },
-  { rank: 5, name: 'Felipe Pena', points: 800, recentResult: 'Silver at IBJJF Pans 2023' },
+  { rank: 1, name: 'Gordon Ryan', recentResult: 'Gold at ADCC 2022' },
+  { rank: 2, name: 'André Galvão', recentResult: 'Silver at IBJJF Worlds 2023' },
+  { rank: 3, name: 'Marcus Almeida', recentResult: 'Gold at IBJJF Euros 2023' },
+  { rank: 4, name: 'Nicholas Meregali', recentResult: 'Bronze at ADCC 2022' },
+  { rank: 5, name: 'Felipe Pena', recentResult: 'Silver at IBJJF Pans 2023' },
 ];
 
 const Leaderboard = () => {
@@ -22,7 +22,6 @@ const Leaderboard = () => {
             <TableRow className="bg-light-gray">
               <TableHead className="text-navy">Rank</TableHead>
               <TableHead className="text-navy">Nome</TableHead>
-              <TableHead className="text-navy">Punti</TableHead>
               <TableHead className="text-navy">Risultato Recente</TableHead>
             </TableRow>
           </TableHeader>
@@ -31,7 +30,6 @@ const Leaderboard = () => {
               <TableRow key={athlete.rank} className="hover:bg-bright-red hover:bg-opacity-20">
                 <TableCell className="text-white">{athlete.rank}</TableCell>
                 <TableCell className="text-white">{athlete.name}</TableCell>
-                <TableCell className="text-white">{athlete.points}</TableCell>
                 <TableCell className="text-white">{athlete.recentResult}</TableCell>
               </TableRow>
             ))}

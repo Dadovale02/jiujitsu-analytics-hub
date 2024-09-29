@@ -3,7 +3,6 @@ import { NavBar } from '../components/NavBar';
 import { TopAthletes } from '../components/TopAthletes';
 import BannerSection from '../components/BannerSection';
 import CompetitionStats from '../components/CompetitionStats';
-import InteractiveTimeline from '../components/InteractiveTimeline';
 import Leaderboard from '../components/Leaderboard';
 import SearchResults from '../components/SearchResults';
 
@@ -45,8 +44,7 @@ const Index = () => {
               <h2 className="text-3xl font-bold mb-4 text-bright-red">Esplora le Statistiche</h2>
               <BannerSection />
             </div>
-            <div className="mt-12 grid grid-cols-1 md:grid-cols-2 gap-8">
-              <InteractiveTimeline />
+            <div className="mt-12">
               <Leaderboard />
             </div>
           </>
