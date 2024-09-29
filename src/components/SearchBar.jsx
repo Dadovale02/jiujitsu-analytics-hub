@@ -17,10 +17,14 @@ export const SearchBar = ({ onSearchResults }) => {
           item.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setResults(filteredResults);
-        onSearchResults(filteredResults);
+        if (typeof onSearchResults === 'function') {
+          onSearchResults(filteredResults);
+        }
       } else {
         setResults([]);
-        onSearchResults([]);
+        if (typeof onSearchResults === 'function') {
+          onSearchResults([]);
+        }
       }
     };
 
@@ -31,7 +35,9 @@ export const SearchBar = ({ onSearchResults }) => {
     navigate(url);
     setSearchTerm('');
     setResults([]);
-    onSearchResults([]);
+    if (typeof onSearchResults === 'function') {
+      onSearchResults([]);
+    }
   };
 
   return (
