@@ -74,7 +74,7 @@ export const athletesData = [
     name: "Marcus Almeida",
     nickname: "Buchecha",
     nationality: "Brazilian",
-    image: "/placeholder.svg",
+    image: "/Buchecha.jpg",
     birthDate: "January 8, 1990",
     age: 33,
     weight: "110 kg",
@@ -109,7 +109,7 @@ export const athletesData = [
     name: "Nicholas Meregali",
     nickname: "The King Slayer",
     nationality: "Brazilian",
-    image: "/placeholder.svg",
+    image: "/meregali.jpeg",
     birthDate: "August 4, 1994",
     age: 29,
     weight: "100 kg",
@@ -144,7 +144,7 @@ export const athletesData = [
     name: "Felipe Pena",
     nickname: "Preguiça",
     nationality: "Brazilian",
-    image: "/placeholder.svg",
+    image: "/felipe-pena.png",
     birthDate: "September 16, 1991",
     age: 32,
     weight: "94 kg",
@@ -382,6 +382,41 @@ export const athletesData = [
       instagram: "kaynanduarte",
       facebook: "kaynanduartebjj",
       twitter: "kaynanduarte"
+    }
+  }
+  {
+    id: 12,
+    name: "Nick Ryan",
+    nickname: "The Blackbelt Slayer",
+    nationality: "American",
+    image: "/images.jpeg",
+    birthDate: "July 8, 1995",
+    age: 28,
+    weight: "99 kg",
+    height: "188 cm",
+    belt: "Black Belt",
+    team: "New Wave Jiu-Jitsu",
+    record: {
+      wins: 137,
+      losses: 9,
+      draws: 3,
+      submissions: 89
+    },
+    bio: "Gordon Ryan is an American Brazilian Jiu-Jitsu (BJJ) black belt competitor and instructor. He is widely regarded as one of the best grapplers of all time and has won multiple ADCC and IBJJF championships.",
+    recentCompetitions: [
+      { name: "ADCC 2022", result: "Gold", opponent: "André Galvão" },
+      { name: "Who's Number One", result: "Win", opponent: "Felipe Pena" },
+      { name: "IBJJF Pan American Championship", result: "Gold", opponent: "Various" }
+    ],
+    techniques: {
+      submissions: ["Rear Naked Choke", "Triangle", "Armbar"],
+      takedowns: ["Single Leg", "Double Leg"],
+      sweeps: ["Butterfly Sweep", "X-Guard Sweep"]
+    },
+    socialMedia: {
+      instagram: "gordonlovesjiujitsu",
+      facebook: "gordonryanbjj",
+      twitter: "gordonryan"
     }
   }
 ];
