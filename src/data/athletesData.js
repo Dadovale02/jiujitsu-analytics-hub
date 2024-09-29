@@ -386,7 +386,7 @@ export const athletesData = [
   },
   {
     id: 12,
-    name: "Nick Ryan",
+    name: "Nick Rodriguez",
     nickname: "The Blackbelt Slayer",
     nationality: "American",
     image: "/images.jpeg",
@@ -417,6 +417,41 @@ export const athletesData = [
       instagram: "gordonlovesjiujitsu",
       facebook: "gordonryanbjj",
       twitter: "gordonryan"
+    }
+  }
+  {
+    id: 13,
+    name: "Nicky Ryan",
+    nickname: "The Beast",
+    nationality: "Brazilian",
+    image: "/Kaynan-duarte.jpg",
+    birthDate: "October 16, 1997",
+    age: 25,
+    weight: "99 kg",
+    height: "188 cm",
+    belt: "Black Belt",
+    team: "Atos Jiu-Jitsu",
+    record: {
+      wins: 70,
+      losses: 15,
+      draws: 0,
+      submissions: 40
+    },
+    bio: "Kaynan Duarte is a Brazilian Jiu-Jitsu black belt competitor. He has won multiple major titles including the ADCC and IBJJF World Championships.",
+    recentCompetitions: [
+      { name: "ADCC 2022", result: "Silver", opponent: "Gordon Ryan" },
+      { name: "IBJJF World Championship 2022", result: "Gold", opponent: "Various" },
+      { name: "Who's Number One", result: "Win", opponent: "Various" }
+    ],
+    techniques: {
+      submissions: ["Rear Naked Choke", "Armbar", "Kimura"],
+      takedowns: ["Single Leg", "Double Leg"],
+      sweeps: ["De La Riva Sweep", "Lasso Guard Sweep"]
+    },
+    socialMedia: {
+      instagram: "kaynanduarte",
+      facebook: "kaynanduartebjj",
+      twitter: "kaynanduarte"
     }
   }
 ];
