@@ -3,6 +3,7 @@ import { useParams } from 'react-router-dom';
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Instagram, Facebook, Twitter } from 'lucide-react';
+import { NavBar } from './NavBar';
 
 const AthleteProfile = ({ athletesData }) => {
   const { id } = useParams();
@@ -14,6 +15,7 @@ const AthleteProfile = ({ athletesData }) => {
 
   return (
     <div className="min-h-screen bg-navy text-white">
+      <NavBar />
       <div className="container mx-auto px-4 py-8">
         <Card className="mb-8 bg-light-gray text-navy">
           <CardHeader>
