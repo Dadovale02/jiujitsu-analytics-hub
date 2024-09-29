@@ -25,14 +25,14 @@ const athletes = [
 
 export const TopAthletes = () => {
   return (
-    <div className="w-full">
+    <div className="w-full h-full">
       <h2 className="text-2xl font-bold mb-4 text-red-600">Atleti più ricercati</h2>
-      <Carousel className="w-full max-w-xs mx-auto">
+      <Carousel className="w-full h-full">
         <CarouselContent>
           {athletes.map((athlete) => (
             <CarouselItem key={athlete.id} className="md:basis-1/3">
               <Link to={`/athletes/${athlete.id}`}>
-                <Card className="bg-red-900">
+                <Card className="bg-red-900 h-full">
                   <CardContent className="flex flex-col items-center p-6">
                     <img
                       src={athlete.image}
