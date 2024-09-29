@@ -48,7 +48,7 @@ const CompetitionStats = () => {
             {competitions.map((competition, index) => (
               <CarouselItem key={index}>
                 <h3 className="text-xl font-semibold mb-4">{competition.name}</h3>
-                <ResponsiveContainer width="90%" height={200}>
+                <ResponsiveContainer width="50%" height={200}>
                   <BarChart data={competition.data}>
                     <XAxis dataKey="name" />
                     <YAxis />
