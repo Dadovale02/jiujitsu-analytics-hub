@@ -52,11 +52,11 @@ export const TopAthletes = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
-        <div className="absolute -bottom-12 left-0 right-0 flex justify-center space-x-2">
-          <CarouselPrevious />
-          <CarouselNext />
-        </div>
       </Carousel>
+      <div className="flex justify-center mt-4 space-x-2">
+        <CarouselPrevious />
+        <CarouselNext />
+      </div>
     </div>
   );
 };
