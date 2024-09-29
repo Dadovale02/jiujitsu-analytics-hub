@@ -8,6 +8,7 @@ import IBJJFWorld from "./pages/IBJJFWorld";
 import ADCCWorld from "./pages/ADCCWorld";
 import WNO from "./pages/WNO";
 import AthleteProfile from "./components/AthleteProfile";
+import { athletesData } from "./data/athletesData";
 
 const queryClient = new QueryClient();
 
@@ -21,7 +22,7 @@ const App = () => (
             <Route key={to} path={to} element={page} />
           ))}
           <Route path="/athletes" element={<Athletes />} />
-          <Route path="/athletes/:id" element={<AthleteProfile />} />
+          <Route path="/athletes/:id" element={<AthleteProfile athletesData={athletesData} />} />
           <Route path="/ibjjf-world" element={<IBJJFWorld />} />
           <Route path="/adcc-world" element={<ADCCWorld />} />
           <Route path="/wno" element={<WNO />} />

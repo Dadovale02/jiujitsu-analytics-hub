@@ -4,51 +4,12 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Table, TableBody, TableCell, TableHead, TableHeader, TableRow } from "@/components/ui/table";
 import { Instagram, Facebook, Twitter } from 'lucide-react';
 
-const athletesData = [
-  {
-    id: 1,
-    name: "Gordon Ryan",
-    nickname: "The King",
-    nationality: "American",
-    image: "/images.jpeg",
-    birthDate: "July 8, 1995",
-    age: 28,
-    weight: "99 kg",
-    height: "188 cm",
-    belt: "Black Belt",
-    team: "New Wave Jiu-Jitsu",
-    record: {
-      wins: 137,
-      losses: 9,
-      draws: 3,
-      submissions: 89
-    },
-    bio: "Gordon Ryan is an American Brazilian Jiu-Jitsu (BJJ) black belt competitor and instructor. He is widely regarded as one of the best grapplers of all time and has won multiple ADCC and IBJJF championships.",
-    recentCompetitions: [
-      { name: "ADCC 2022", result: "Gold", opponent: "André Galvão" },
-      { name: "Who's Number One", result: "Win", opponent: "Felipe Pena" },
-      { name: "IBJJF Pan American Championship", result: "Gold", opponent: "Various" }
-    ],
-    techniques: {
-      submissions: ["Rear Naked Choke", "Triangle", "Armbar"],
-      takedowns: ["Single Leg", "Double Leg"],
-      sweeps: ["Butterfly Sweep", "X-Guard Sweep"]
-    },
-    socialMedia: {
-      instagram: "gordonlovesjiujitsu",
-      facebook: "gordonryanbjj",
-      twitter: "gordonryan"
-    }
-  },
-  // Add more athletes here...
-];
-
-const AthleteProfile = () => {
+const AthleteProfile = ({ athletesData }) => {
   const { id } = useParams();
   const athlete = athletesData.find(a => a.id === parseInt(id));
 
   if (!athlete) {
-    return <div>Athlete not found</div>;
+    return <div>Atleta non trovato</div>;
   }
 
   return (
