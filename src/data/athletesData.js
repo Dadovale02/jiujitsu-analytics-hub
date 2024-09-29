@@ -430,7 +430,7 @@ export const athletesData = [
     weight: "77 kg",
     height: "180 cm",
     belt: "Black Belt",
-    team: "New Wave Jiu-Jitsu",
+    team: "Atos Jiu-Jitsu",
     record: {
       wins: 35,
       losses: 5,
