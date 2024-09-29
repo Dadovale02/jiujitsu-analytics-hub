@@ -11,12 +11,12 @@ import {
 
 const athletes = [
   { id: 1, name: "Gordon Ryan", nickname: "The King", team: "New Wave Jiu-Jitsu", weight: "Peso Pesado", image: "/images.jpeg" },
-  { id: 2, name: "Tye Ruotolo", nickname: "The Prodigy", team: "Atos Jiu-Jitsu", weight: "Peso Médio", image: "/Tye-Ruotolo.jpg" },
-  { id: 3, name: "Kade Ruotolo", nickname: "The Phenom", team: "Atos Jiu-Jitsu", weight: "Peso Médio", image: "/Kade_Ruotolo.jpg" },
-  { id: 4, name: "Levi Jones Leary", nickname: "The Savage", team: "Unity Jiu-Jitsu", weight: "Peso Leve", image: "/Levi-jones-leary.jpeg" },
-  { id: 5, name: "Mica Galvao", nickname: "The Prodigy", team: "Manaus Jiu-Jitsu", weight: "Peso Médio", image: "/Mica-galvao.jpeg" },
-  { id: 6, name: "Giancarlo Bodoni", nickname: "The Giant", team: "New Wave Jiu-Jitsu", weight: "Peso Pesado", image: "/Giancarlo-bodoni.jpg" },
-  { id: 7, name: "Kaynan Duarte", nickname: "The Beast", team: "Atos Jiu-Jitsu", weight: "Peso Pesado", image: "/Kaynan-duarte.jpg" },
+  { id: 2, name: "André Galvão", nickname: "Deco", team: "Atos Jiu-Jitsu", weight: "Peso Médio", image: "/placeholder.svg" },
+  { id: 3, name: "Marcus Almeida", nickname: "Buchecha", team: "Checkmat", weight: "Peso Pesado", image: "/placeholder.svg" },
+  { id: 4, name: "Nicholas Meregali", nickname: "The King Slayer", team: "New Wave Jiu-Jitsu", weight: "Peso Pesado", image: "/placeholder.svg" },
+  { id: 5, name: "Felipe Pena", nickname: "Preguiça", team: "Gracie Barra", weight: "Peso Pesado", image: "/placeholder.svg" },
+  { id: 6, name: "Tye Ruotolo", nickname: "The Prodigy", team: "Atos Jiu-Jitsu", weight: "Peso Médio", image: "/Tye-Ruotolo.jpg" },
+  { id: 7, name: "Kade Ruotolo", nickname: "The Phenom", team: "Atos Jiu-Jitsu", weight: "Peso Médio", image: "/Kade_Ruotolo.jpg" },
 ];
 
 export const TopAthletes = () => {
