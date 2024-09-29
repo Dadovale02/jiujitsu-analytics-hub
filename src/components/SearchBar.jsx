@@ -3,16 +3,7 @@ import { Search } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from 'react-router-dom';
-
-const allItems = [
-  { id: 1, name: "Gordon Ryan", type: "Athlete", url: "/athletes/1" },
-  { id: 2, name: "Atos Jiu-Jitsu", type: "Team", url: "/teams/atos" },
-  { id: 3, name: "IBJJF World Championship", type: "Competition", url: "/competitions/ibjjf-world" },
-  { id: 4, name: "André Galvão", type: "Athlete", url: "/athletes/2" },
-  { id: 5, name: "Alliance", type: "Team", url: "/teams/alliance" },
-  { id: 6, name: "ADCC", type: "Competition", url: "/competitions/adcc" },
-  // Aggiungi altri elementi qui...
-];
+import { searchData } from '../data/searchData';
 
 export const SearchBar = ({ onSearchResults }) => {
   const [searchTerm, setSearchTerm] = useState('');
@@ -22,7 +13,7 @@ export const SearchBar = ({ onSearchResults }) => {
   useEffect(() => {
     const fetchSearchResults = () => {
       if (searchTerm.length > 0) {
-        const filteredResults = allItems.filter(item =>
+        const filteredResults = searchData.filter(item =>
           item.name.toLowerCase().includes(searchTerm.toLowerCase())
         );
         setResults(filteredResults);
