@@ -10,9 +10,9 @@ import {
 } from "@/components/ui/carousel";
 
 const athletes = [
-  { id: 1, name: "Gordon Ryan", image: "/gordon-ryan.jpg", wins: 95, losses: 5, team: "New Wave Jiu-Jitsu" },
-  { id: 2, name: "Tye Ruotolo", image: "/placeholder.svg", wins: 80, losses: 10, team: "Atos Jiu-Jitsu" },
-  { id: 3, name: "Kade Ruotolo", image: "/placeholder.svg", wins: 82, losses: 8, team: "Atos Jiu-Jitsu" },
+  { id: 1, name: "Gordon Ryan", image: "/images.jpeg", wins: 95, losses: 5, team: "New Wave Jiu-Jitsu" },
+  { id: 2, name: "Tye Ruotolo", image: "/Tye-Ruotolo.jpg", wins: 80, losses: 10, team: "Atos Jiu-Jitsu" },
+  { id: 3, name: "Kade Ruotolo", image: "/Kade_Ruotolo.jpg", wins: 82, losses: 8, team: "Atos Jiu-Jitsu" },
   { id: 4, name: "Levi Jones Leary", image: "/placeholder.svg", wins: 75, losses: 15, team: "Unity Jiu-Jitsu" },
   { id: 5, name: "Mica Galvao", image: "/placeholder.svg", wins: 85, losses: 7, team: "Manaus Jiu-Jitsu" },
   { id: 6, name: "Giancarlo Bodoni", image: "/placeholder.svg", wins: 70, losses: 20, team: "New Wave Jiu-Jitsu" },
@@ -26,7 +26,7 @@ const athletes = [
 export const TopAthletes = () => {
   return (
     <div className="w-full h-full relative">
-      <h2 className="text-2xl font-bold mb-4 text-red-600">Atleti più ricercati</h2>
+      <h2 className="text-2xl font-bold mb-4 text-bright-red">Atleti più ricercati</h2>
       <Carousel className="w-full h-full">
         <CarouselContent>
           {athletes.map((athlete) => (
@@ -38,6 +38,10 @@ export const TopAthletes = () => {
                       src={athlete.image}
                       alt={athlete.name}
                       className="w-32 h-32 rounded-full mb-4 mx-auto object-cover"
+                      onError={(e) => {
+                        e.target.onerror = null;
+                        e.target.src = "/placeholder.svg";
+                      }}
                     />
                     <h3 className="text-xl font-semibold text-white">{athlete.name}</h3>
                     <p className="text-white">Team: {athlete.team}</p>
