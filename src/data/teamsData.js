@@ -39,6 +39,7 @@ export const teamsData = [
     history: "New Wave Jiu-Jitsu was founded in 2021 by John Danaher and the DDS (Danaher Death Squad) after their split from Renzo Gracie Academy. The team quickly became known for their innovative approach to leg locks and submission-oriented grappling.",
     mainAthletes: [
       { id: "1", name: "Gordon Ryan" },
+      { id: "4", name: "Nicholas Meregali" },
       { id: "10", name: "Giancarlo Bodoni" }
     ],
     achievements: [
@@ -85,5 +86,87 @@ export const teamsData = [
       twitter: "graciebarra"
     },
     website: "https://graciebarra.com"
+  },
+  {
+    id: "checkmat",
+    name: "Checkmat",
+    logo: "/path/to/checkmat-logo.jpg",
+    foundedYear: 2008,
+    headquarters: "Long Beach, California, USA",
+    history: "Checkmat was founded in 2008 by Leo Vieira in Brazil. The team has quickly risen to prominence in the competitive BJJ scene, known for producing numerous world-class athletes.",
+    mainAthletes: [
+      { id: "3", name: "Marcus Almeida" }
+    ],
+    achievements: [
+      "Multiple IBJJF World Championship Team Titles",
+      "Numerous ADCC World Championship Medals",
+      "Multiple European and Pan American Championship Titles"
+    ],
+    distinctiveTechniques: "Checkmat is known for their aggressive and dynamic style, with a strong emphasis on both gi and no-gi techniques.",
+    affiliatedAcademies: [
+      { name: "Checkmat HQ", location: "Long Beach, California" },
+      { name: "Checkmat São Paulo", location: "São Paulo, Brazil" },
+      { name: "Checkmat Rio de Janeiro", location: "Rio de Janeiro, Brazil" }
+    ],
+    socialMedia: {
+      instagram: "checkmathq",
+      facebook: "CheckmatBJJ",
+      twitter: "checkmathq"
+    },
+    website: "https://www.checkmatbjj.com"
+  },
+  {
+    id: "unity",
+    name: "Unity Jiu-Jitsu",
+    logo: "/path/to/unity-logo.jpg",
+    foundedYear: 2013,
+    headquarters: "New York City, New York, USA",
+    history: "Unity Jiu-Jitsu was founded in 2013 by Murilo Santana in New York City. The team has quickly gained recognition for its competition success and innovative training methods.",
+    mainAthletes: [
+      { id: "8", name: "Levi Jones Leary" }
+    ],
+    achievements: [
+      "Multiple IBJJF World Championship Medals",
+      "Numerous ADCC World Championship Qualifiers",
+      "Multiple Pan American and European Open Titles"
+    ],
+    distinctiveTechniques: "Unity is known for their dynamic guard play, innovative passing techniques, and strong emphasis on competition training.",
+    affiliatedAcademies: [
+      { name: "Unity Jiu-Jitsu HQ", location: "New York City, New York" },
+      { name: "Unity Jiu-Jitsu São Paulo", location: "São Paulo, Brazil" }
+    ],
+    socialMedia: {
+      instagram: "unityjiujitsu",
+      facebook: "UnityJiuJitsu",
+      twitter: "unityjiujitsu"
+    },
+    website: "https://unityjiujitsu.com"
+  },
+  {
+    id: "manaus",
+    name: "Manaus Jiu-Jitsu",
+    logo: "/path/to/manaus-logo.jpg",
+    foundedYear: 2015,
+    headquarters: "Manaus, Amazonas, Brazil",
+    history: "Manaus Jiu-Jitsu represents the collective BJJ community from the city of Manaus, known for producing numerous world-class grapplers. While not a formal team, it's recognized for the unique style and talent coming from this Amazonian city.",
+    mainAthletes: [
+      { id: "9", name: "Mica Galvao" }
+    ],
+    achievements: [
+      "Multiple IBJJF World Championship Medals",
+      "Numerous ADCC World Championship Qualifiers",
+      "Multiple Brazilian National and Regional Titles"
+    ],
+    distinctiveTechniques: "Manaus Jiu-Jitsu is known for its aggressive and submission-oriented style, often incorporating unique techniques influenced by the local grappling culture.",
+    affiliatedAcademies: [
+      { name: "Melqui Galvão Jiu-Jitsu", location: "Manaus, Amazonas" },
+      { name: "Pina BJJ", location: "Manaus, Amazonas" }
+    ],
+    socialMedia: {
+      instagram: "manausjiujitsu",
+      facebook: "ManausJiuJitsu",
+      twitter: "manausbjj"
+    },
+    website: "https://www.manausjiujitsu.com"
   }
 ];
