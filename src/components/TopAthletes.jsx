@@ -10,17 +10,13 @@ import {
 } from "@/components/ui/carousel";
 
 const athletes = [
-  { id: 1, name: "Gordon Ryan", image: "/images.jpeg", wins: 95, losses: 5, team: "New Wave Jiu-Jitsu" },
-  { id: 2, name: "Tye Ruotolo", image: "/Tye-Ruotolo.jpg", wins: 80, losses: 10, team: "Atos Jiu-Jitsu" },
-  { id: 3, name: "Kade Ruotolo", image: "/Kade_Ruotolo.jpg", wins: 82, losses: 8, team: "Atos Jiu-Jitsu" },
-  { id: 4, name: "Levi Jones Leary", image: "/placeholder.svg", wins: 75, losses: 15, team: "Unity Jiu-Jitsu" },
-  { id: 5, name: "Mica Galvao", image: "/placeholder.svg", wins: 85, losses: 7, team: "Manaus Jiu-Jitsu" },
-  { id: 6, name: "Giancarlo Bodoni", image: "/placeholder.svg", wins: 70, losses: 20, team: "New Wave Jiu-Jitsu" },
-  { id: 7, name: "Kaynan Duarte", image: "/placeholder.svg", wins: 88, losses: 12, team: "Atos Jiu-Jitsu" },
-  { id: 8, name: "Felipe Pena", image: "/placeholder.svg", wins: 90, losses: 10, team: "Gracie Barra" },
-  { id: 9, name: "Nick Rodriguez", image: "/placeholder.svg", wins: 78, losses: 22, team: "B-Team Jiu-Jitsu" },
-  { id: 10, name: "Helena Crevar", image: "/placeholder.svg", wins: 65, losses: 5, team: "Atos Jiu-Jitsu" },
-  { id: 11, name: "Diogo Reis", image: "/placeholder.svg", wins: 72, losses: 8, team: "Dream Art" },
+  { id: 1, name: "Gordon Ryan", nickname: "The King", team: "New Wave Jiu-Jitsu", weight: "Peso Pesado", image: "/images.jpeg" },
+  { id: 2, name: "Tye Ruotolo", nickname: "The Prodigy", team: "Atos Jiu-Jitsu", weight: "Peso Médio", image: "/Tye-Ruotolo.jpg" },
+  { id: 3, name: "Kade Ruotolo", nickname: "The Phenom", team: "Atos Jiu-Jitsu", weight: "Peso Médio", image: "/Kade_Ruotolo.jpg" },
+  { id: 4, name: "Levi Jones Leary", nickname: "The Savage", team: "Unity Jiu-Jitsu", weight: "Peso Leve", image: "/Levi-jones-leary.jpeg" },
+  { id: 5, name: "Mica Galvao", nickname: "The Prodigy", team: "Manaus Jiu-Jitsu", weight: "Peso Médio", image: "/Mica-galvao.jpeg" },
+  { id: 6, name: "Giancarlo Bodoni", nickname: "The Giant", team: "New Wave Jiu-Jitsu", weight: "Peso Pesado", image: "/placeholder.svg" },
+  { id: 7, name: "Kaynan Duarte", nickname: "The Beast", team: "Atos Jiu-Jitsu", weight: "Peso Pesado", image: "/placeholder.svg" },
 ];
 
 export const TopAthletes = () => {
@@ -45,8 +41,7 @@ export const TopAthletes = () => {
                     />
                     <h3 className="text-xl font-semibold text-white">{athlete.name}</h3>
                     <p className="text-white">Team: {athlete.team}</p>
-                    <p className="text-white">Vittorie: {athlete.wins}</p>
-                    <p className="text-white">Sconfitte: {athlete.losses}</p>
+                    <p className="text-white">Categoria: {athlete.weight}</p>
                   </CardContent>
                 </Card>
               </Link>
