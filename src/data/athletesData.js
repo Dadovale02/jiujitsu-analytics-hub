@@ -39,7 +39,7 @@ export const athletesData = [
     name: "André Galvão",
     nickname: "Deco",
     nationality: "Brazilian",
-    image: "/placeholder.svg",
+    image: "/Andre_Galvao.jpg",
     birthDate: "September 29, 1982",
     age: 41,
     weight: "88 kg",
