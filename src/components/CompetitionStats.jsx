@@ -38,7 +38,7 @@ const competitions = [
 
 const CompetitionStats = () => {
   return (
-    <Card className="mt-8 relative">
+    <Card className="mt-8">
       <CardHeader>
         <CardTitle>Statistiche Vittorie per Competizione</CardTitle>
       </CardHeader>
@@ -47,20 +47,20 @@ const CompetitionStats = () => {
           <CarouselContent>
             {competitions.map((competition, index) => (
               <CarouselItem key={index}>
-                <h3 className="text-xl font-semibold mb-4">{competition.name}</h3>
-                <ResponsiveContainer width="50%" height={200}>
+                <h3 className="text-lg font-semibold mb-2">{competition.name}</h3>
+                <ResponsiveContainer width="100%" height={120}>
                   <BarChart data={competition.data}>
-                    <XAxis dataKey="name" />
-                    <YAxis />
+                    <XAxis dataKey="name" fontSize={10} />
+                    <YAxis fontSize={10} />
                     <Tooltip />
-                    <Legend />
+                    <Legend wrapperStyle={{ fontSize: '10px' }} />
                     <Bar dataKey="value" fill="#ef4444" />
                   </BarChart>
                 </ResponsiveContainer>
               </CarouselItem>
             ))}
           </CarouselContent>
-          <div className="flex justify-center mt-4 space-x-2">
+          <div className="flex justify-center mt-2">
             <CarouselPrevious />
             <CarouselNext />
           </div>
