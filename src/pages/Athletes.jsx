@@ -9,8 +9,8 @@ const athletesData = [
   { id: 3, name: "Kade Ruotolo", nickname: "The Phenom", team: "Atos Jiu-Jitsu", weight: "Peso Médio", image: "/Kade_Ruotolo.jpg" },
   { id: 4, name: "Levi Jones Leary", nickname: "The Savage", team: "Unity Jiu-Jitsu", weight: "Peso Leve", image: "/Levi-jones-leary.jpeg" },
   { id: 5, name: "Mica Galvao", nickname: "The Prodigy", team: "Manaus Jiu-Jitsu", weight: "Peso Médio", image: "/Mica-galvao.jpeg" },
-  { id: 6, name: "Giancarlo Bodoni", nickname: "The Giant", team: "New Wave Jiu-Jitsu", weight: "Peso Pesado", image: "/placeholder.svg" },
-  { id: 7, name: "Kaynan Duarte", nickname: "The Beast", team: "Atos Jiu-Jitsu", weight: "Peso Pesado", image: "/placeholder.svg" },
+  { id: 6, name: "Giancarlo Bodoni", nickname: "The Giant", team: "New Wave Jiu-Jitsu", weight: "Peso Pesado", image: "/Giancarlo-bodoni.jpg" },
+  { id: 7, name: "Kaynan Duarte", nickname: "The Beast", team: "Atos Jiu-Jitsu", weight: "Peso Pesado", image: "/Kaynan-duarte.jpg" },
 ];
 
 const AthleteDetails = ({ athlete }) => (
