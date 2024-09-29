@@ -383,7 +383,7 @@ export const athletesData = [
       facebook: "kaynanduartebjj",
       twitter: "kaynanduarte"
     }
-  }
+  },
   {
     id: 12,
     name: "Nick Ryan",
