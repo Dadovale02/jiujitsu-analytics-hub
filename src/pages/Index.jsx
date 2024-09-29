@@ -14,15 +14,15 @@ const Index = () => {
         <h1 className="text-6xl font-bold text-center mb-8 text-bright-red">JiuJitsuData</h1>
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           <TopAthletes />
-          <div>
-            <h2 className="text-3xl font-bold mb-4 text-bright-red">Video in Evidenza</h2>
+          <div className="md:col-span-2">
+            <h2 className="text-3xl font-bold mb-4 text-bright-red">Match in Evidenza</h2>
             <div className="aspect-w-16 aspect-h-9">
               <iframe
-                src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                src="https://www.youtube.com/embed/HkwFwGYtqfk?start=389"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen
-                className="w-full h-full"
+                className="w-full h-[400px]"
               ></iframe>
             </div>
           </div>
