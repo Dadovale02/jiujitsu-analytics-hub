@@ -1,34 +1,39 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Search } from 'lucide-react';
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from 'react-router-dom';
-
-const mockData = [
-  { id: 1, name: "Gordon Ryan", type: "Athlete", url: "/athletes/1" },
-  { id: 2, name: "Atos Jiu-Jitsu", type: "Team", url: "/teams/atos" },
-  { id: 3, name: "IBJJF World Championship", type: "Competition", url: "/competitions/ibjjf-world" },
-  // Aggiungi altri dati mock secondo necessità
-];
 
 export const SearchBar = () => {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
   const navigate = useNavigate();
 
-  const handleSearch = (event) => {
-    const value = event.target.value;
-    setSearchTerm(value);
+  useEffect(() => {
+    const fetchSearchResults = async () => {
+      if (searchTerm.length > 2) {
+        // In a real application, this would be an API call
+        const mockAPI = async () => {
+          const mockData = [
+            { id: 1, name: "Gordon Ryan", type: "Athlete", url: "/athletes/1" },
+            { id: 2, name: "Atos Jiu-Jitsu", type: "Team", url: "/teams/atos" },
+            { id: 3, name: "IBJJF World Championship", type: "Competition", url: "/competitions/ibjjf-world" },
+            // Add more mock data as needed
+          ];
+          return mockData.filter(item =>
+            item.name.toLowerCase().includes(searchTerm.toLowerCase())
+          );
+        };
 
-    if (value.length > 2) {
-      const filtered = mockData.filter(item =>
-        item.name.toLowerCase().includes(value.toLowerCase())
-      );
-      setResults(filtered);
-    } else {
-      setResults([]);
-    }
-  };
+        const data = await mockAPI();
+        setResults(data);
+      } else {
+        setResults([]);
+      }
+    };
+
+    fetchSearchResults();
+  }, [searchTerm]);
 
   const handleResultClick = (url) => {
     navigate(url);
@@ -43,7 +48,7 @@ export const SearchBar = () => {
           type="text"
           placeholder="Cerca atleti, team o gare..."
           value={searchTerm}
-          onChange={handleSearch}
+          onChange={(e) => setSearchTerm(e.target.value)}
           className="w-full bg-white text-black placeholder-gray-500"
         />
         <Button type="submit" className="ml-2 bg-bright-red text-white hover:bg-red-600">
