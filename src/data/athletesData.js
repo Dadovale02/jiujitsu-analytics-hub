@@ -387,71 +387,71 @@ export const athletesData = [
   {
     id: 12,
     name: "Nick Rodriguez",
-    nickname: "The Blackbelt Slayer",
+    nickname: "Nicky Rod",
     nationality: "American",
-    image: "/images.jpeg",
-    birthDate: "July 8, 1995",
-    age: 28,
+    image: "/placeholder.svg",
+    birthDate: "December 15, 1996",
+    age: 26,
     weight: "99 kg",
     height: "188 cm",
     belt: "Black Belt",
-    team: "New Wave Jiu-Jitsu",
+    team: "B-Team Jiu-Jitsu",
     record: {
-      wins: 137,
-      losses: 9,
-      draws: 3,
-      submissions: 89
+      wins: 40,
+      losses: 10,
+      draws: 0,
+      submissions: 20
     },
-    bio: "Gordon Ryan is an American Brazilian Jiu-Jitsu (BJJ) black belt competitor and instructor. He is widely regarded as one of the best grapplers of all time and has won multiple ADCC and IBJJF championships.",
+    bio: "Nick Rodriguez, also known as 'Nicky Rod', is an American grappler and Brazilian Jiu-Jitsu black belt competitor. He gained prominence for his rapid rise in the sport and his strong wrestling background.",
     recentCompetitions: [
-      { name: "ADCC 2022", result: "Gold", opponent: "André Galvão" },
-      { name: "Who's Number One", result: "Win", opponent: "Felipe Pena" },
-      { name: "IBJJF Pan American Championship", result: "Gold", opponent: "Various" }
+      { name: "ADCC 2022", result: "Silver", opponent: "Various" },
+      { name: "Who's Number One", result: "Win", opponent: "Various" },
+      { name: "IBJJF No-Gi World Championship", result: "Gold", opponent: "Various" }
     ],
     techniques: {
-      submissions: ["Rear Naked Choke", "Triangle", "Armbar"],
-      takedowns: ["Single Leg", "Double Leg"],
+      submissions: ["Rear Naked Choke", "Guillotine", "Arm Triangle"],
+      takedowns: ["Double Leg", "Single Leg", "Body Lock"],
       sweeps: ["Butterfly Sweep", "X-Guard Sweep"]
     },
     socialMedia: {
-      instagram: "gordonlovesjiujitsu",
-      facebook: "gordonryanbjj",
-      twitter: "gordonryan"
+      instagram: "nickrodbjj",
+      facebook: "nickrodriguezbjj",
+      twitter: "nickrodbjj"
     }
-  }
+  },
   {
     id: 13,
     name: "Nicky Ryan",
-    nickname: "The Beast",
-    nationality: "Brazilian",
-    image: "/Kaynan-duarte.jpg",
-    birthDate: "October 16, 1997",
-    age: 25,
-    weight: "99 kg",
-    height: "188 cm",
+    nickname: "The Prodigy",
+    nationality: "American",
+    image: "/placeholder.svg",
+    birthDate: "July 13, 2001",
+    age: 22,
+    weight: "77 kg",
+    height: "180 cm",
     belt: "Black Belt",
-    team: "Atos Jiu-Jitsu",
+    team: "New Wave Jiu-Jitsu",
     record: {
-      wins: 70,
-      losses: 15,
+      wins: 35,
+      losses: 5,
       draws: 0,
-      submissions: 40
+      submissions: 25
     },
-    bio: "Kaynan Duarte is a Brazilian Jiu-Jitsu black belt competitor. He has won multiple major titles including the ADCC and IBJJF World Championships.",
+    bio: "Nicky Ryan is an American Brazilian Jiu-Jitsu black belt competitor. He is known for his technical prowess and is considered one of the top young talents in the sport.",
     recentCompetitions: [
-      { name: "ADCC 2022", result: "Silver", opponent: "Gordon Ryan" },
-      { name: "IBJJF World Championship 2022", result: "Gold", opponent: "Various" },
-      { name: "Who's Number One", result: "Win", opponent: "Various" }
+      { name: "ADCC 2022", result: "Participant", opponent: "Various" },
+      { name: "Who's Number One", result: "Win", opponent: "Various" },
+      { name: "IBJJF Pan Championship", result: "Gold", opponent: "Various" }
     ],
     techniques: {
-      submissions: ["Rear Naked Choke", "Armbar", "Kimura"],
-      takedowns: ["Single Leg", "Double Leg"],
-      sweeps: ["De La Riva Sweep", "Lasso Guard Sweep"]
+      submissions: ["Heel Hook", "Triangle", "Rear Naked Choke"],
+      takedowns: ["Single Leg", "Ankle Pick"],
+      sweeps: ["Butterfly Sweep", "X-Guard Sweep"]
     },
     socialMedia: {
-      instagram: "kaynanduarte",
-      facebook: "kaynanduartebjj",
-      twitter: "kaynanduarte"
+      instagram: "nickyryanbjj",
+      facebook: "nickyryanbjj",
+      twitter: "nickyryanbjj"
     }
   }
 ];
