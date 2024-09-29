@@ -4,45 +4,47 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { useNavigate } from 'react-router-dom';
 
-export const SearchBar = () => {
+const allItems = [
+  { id: 1, name: "Gordon Ryan", type: "Athlete", url: "/athletes/1" },
+  { id: 2, name: "Atos Jiu-Jitsu", type: "Team", url: "/teams/atos" },
+  { id: 3, name: "IBJJF World Championship", type: "Competition", url: "/competitions/ibjjf-world" },
+  { id: 4, name: "André Galvão", type: "Athlete", url: "/athletes/2" },
+  { id: 5, name: "Alliance", type: "Team", url: "/teams/alliance" },
+  { id: 6, name: "ADCC", type: "Competition", url: "/competitions/adcc" },
+  // Aggiungi altri elementi qui...
+];
+
+export const SearchBar = ({ onSearchResults }) => {
   const [searchTerm, setSearchTerm] = useState('');
   const [results, setResults] = useState([]);
   const navigate = useNavigate();
 
   useEffect(() => {
-    const fetchSearchResults = async () => {
-      if (searchTerm.length > 2) {
-        // In a real application, this would be an API call
-        const mockAPI = async () => {
-          const mockData = [
-            { id: 1, name: "Gordon Ryan", type: "Athlete", url: "/athletes/1" },
-            { id: 2, name: "Atos Jiu-Jitsu", type: "Team", url: "/teams/atos" },
-            { id: 3, name: "IBJJF World Championship", type: "Competition", url: "/competitions/ibjjf-world" },
-            // Add more mock data as needed
-          ];
-          return mockData.filter(item =>
-            item.name.toLowerCase().includes(searchTerm.toLowerCase())
-          );
-        };
-
-        const data = await mockAPI();
-        setResults(data);
+    const fetchSearchResults = () => {
+      if (searchTerm.length > 0) {
+        const filteredResults = allItems.filter(item =>
+          item.name.toLowerCase().includes(searchTerm.toLowerCase())
+        );
+        setResults(filteredResults);
+        onSearchResults(filteredResults);
       } else {
         setResults([]);
+        onSearchResults([]);
       }
     };
 
     fetchSearchResults();
-  }, [searchTerm]);
+  }, [searchTerm, onSearchResults]);
 
   const handleResultClick = (url) => {
     navigate(url);
     setSearchTerm('');
     setResults([]);
+    onSearchResults([]);
   };
 
   return (
-    <div className="relative">
+    <div className="relative w-full max-w-xl">
       <div className="flex">
         <Input
           type="text"
