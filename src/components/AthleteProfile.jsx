@@ -42,7 +42,6 @@ const AthleteProfile = ({ athletesData }) => {
                 <TableRow>
                   <TableHead>Vittorie</TableHead>
                   <TableHead>Sconfitte</TableHead>
-                  <TableHead>Pareggi</TableHead>
                   <TableHead>Submission</TableHead>
                 </TableRow>
               </TableHeader>
@@ -50,7 +49,6 @@ const AthleteProfile = ({ athletesData }) => {
                 <TableRow>
                   <TableCell>{athlete.record.wins}</TableCell>
                   <TableCell>{athlete.record.losses}</TableCell>
-                  <TableCell>{athlete.record.draws}</TableCell>
                   <TableCell>{athlete.record.submissions}</TableCell>
                 </TableRow>
               </TableBody>
