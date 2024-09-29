@@ -30,7 +30,7 @@ export const TopAthletes = () => {
       <Carousel className="w-full h-full">
         <CarouselContent>
           {athletes.map((athlete) => (
-            <CarouselItem key={athlete.id} className="md:basis-1/2 lg:basis-1/3">
+            <CarouselItem key={athlete.id} className="md:basis-1/3">
               <Link to={`/athletes/${athlete.id}`}>
                 <Card className="bg-red-900 h-full">
                   <CardContent className="flex flex-col items-center p-6">
