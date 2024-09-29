@@ -9,129 +9,131 @@ const AthleteProfile = ({ athletesData }) => {
   const athlete = athletesData.find(a => a.id === parseInt(id));
 
   if (!athlete) {
-    return <div>Atleta non trovato</div>;
+    return <div className="text-white">Atleta non trovato</div>;
   }
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <Card className="mb-8">
-        <CardHeader>
-          <div className="flex items-center">
-            <img 
-              src={athlete.image} 
-              alt={athlete.name} 
-              className="w-32 h-32 rounded-full mr-4 object-cover"
-              onError={(e) => {
-                e.target.onerror = null;
-                e.target.src = "/placeholder.svg";
-              }}
-            />
-            <div>
-              <CardTitle className="text-3xl font-bold">{athlete.name}</CardTitle>
-              <p className="text-xl text-gray-600">{athlete.nickname} | {athlete.nationality}</p>
+    <div className="min-h-screen bg-navy text-white">
+      <div className="container mx-auto px-4 py-8">
+        <Card className="mb-8 bg-light-gray text-navy">
+          <CardHeader>
+            <div className="flex items-center">
+              <img 
+                src={athlete.image} 
+                alt={athlete.name} 
+                className="w-32 h-32 rounded-full mr-4 object-cover"
+                onError={(e) => {
+                  e.target.onerror = null;
+                  e.target.src = "/placeholder.svg";
+                }}
+              />
+              <div>
+                <CardTitle className="text-3xl font-bold text-bright-red">{athlete.name}</CardTitle>
+                <p className="text-xl text-gray-600">{athlete.nickname} | {athlete.nationality}</p>
+              </div>
             </div>
-          </div>
-        </CardHeader>
-        <CardContent>
-          <h2 className="text-2xl font-semibold mb-2">Record di Combattimenti</h2>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Vittorie</TableHead>
-                <TableHead>Sconfitte</TableHead>
-                <TableHead>Pareggi</TableHead>
-                <TableHead>Submission</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              <TableRow>
-                <TableCell>{athlete.record.wins}</TableCell>
-                <TableCell>{athlete.record.losses}</TableCell>
-                <TableCell>{athlete.record.draws}</TableCell>
-                <TableCell>{athlete.record.submissions}</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-2">Informazioni Personali</h2>
-          <Table>
-            <TableBody>
-              <TableRow>
-                <TableCell className="font-semibold">Data di Nascita</TableCell>
-                <TableCell>{athlete.birthDate}</TableCell>
-                <TableCell className="font-semibold">Età</TableCell>
-                <TableCell>{athlete.age}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-semibold">Peso</TableCell>
-                <TableCell>{athlete.weight}</TableCell>
-                <TableCell className="font-semibold">Altezza</TableCell>
-                <TableCell>{athlete.height}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-semibold">Cintura</TableCell>
-                <TableCell>{athlete.belt}</TableCell>
-                <TableCell className="font-semibold">Team</TableCell>
-                <TableCell>{athlete.team}</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-2">Biografia</h2>
-          <p>{athlete.bio}</p>
-
-          <h2 className="text-2xl font-semibold mt-6 mb-2">Gare Recenti</h2>
-          <Table>
-            <TableHeader>
-              <TableRow>
-                <TableHead>Gara</TableHead>
-                <TableHead>Risultato</TableHead>
-                <TableHead>Avversario</TableHead>
-              </TableRow>
-            </TableHeader>
-            <TableBody>
-              {athlete.recentCompetitions.map((comp, index) => (
-                <TableRow key={index}>
-                  <TableCell>{comp.name}</TableCell>
-                  <TableCell>{comp.result}</TableCell>
-                  <TableCell>{comp.opponent}</TableCell>
+          </CardHeader>
+          <CardContent>
+            <h2 className="text-2xl font-semibold mb-2 text-bright-red">Record di Combattimenti</h2>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Vittorie</TableHead>
+                  <TableHead>Sconfitte</TableHead>
+                  <TableHead>Pareggi</TableHead>
+                  <TableHead>Submission</TableHead>
                 </TableRow>
-              ))}
-            </TableBody>
-          </Table>
+              </TableHeader>
+              <TableBody>
+                <TableRow>
+                  <TableCell>{athlete.record.wins}</TableCell>
+                  <TableCell>{athlete.record.losses}</TableCell>
+                  <TableCell>{athlete.record.draws}</TableCell>
+                  <TableCell>{athlete.record.submissions}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
 
-          <h2 className="text-2xl font-semibold mt-6 mb-2">Statistiche Tecniche</h2>
-          <Table>
-            <TableBody>
-              <TableRow>
-                <TableCell className="font-semibold">Submission Preferite</TableCell>
-                <TableCell>{athlete.techniques.submissions.join(", ")}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-semibold">Takedown Preferiti</TableCell>
-                <TableCell>{athlete.techniques.takedowns.join(", ")}</TableCell>
-              </TableRow>
-              <TableRow>
-                <TableCell className="font-semibold">Sweep Preferiti</TableCell>
-                <TableCell>{athlete.techniques.sweeps.join(", ")}</TableCell>
-              </TableRow>
-            </TableBody>
-          </Table>
+            <h2 className="text-2xl font-semibold mt-6 mb-2 text-bright-red">Informazioni Personali</h2>
+            <Table>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-semibold">Data di Nascita</TableCell>
+                  <TableCell>{athlete.birthDate}</TableCell>
+                  <TableCell className="font-semibold">Età</TableCell>
+                  <TableCell>{athlete.age}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-semibold">Peso</TableCell>
+                  <TableCell>{athlete.weight}</TableCell>
+                  <TableCell className="font-semibold">Altezza</TableCell>
+                  <TableCell>{athlete.height}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-semibold">Cintura</TableCell>
+                  <TableCell>{athlete.belt}</TableCell>
+                  <TableCell className="font-semibold">Team</TableCell>
+                  <TableCell>{athlete.team}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
 
-          <h2 className="text-2xl font-semibold mt-6 mb-2">Social Media</h2>
-          <div className="flex space-x-4">
-            <a href={`https://www.instagram.com/${athlete.socialMedia.instagram}`} target="_blank" rel="noopener noreferrer">
-              <Instagram className="h-6 w-6" />
-            </a>
-            <a href={`https://www.facebook.com/${athlete.socialMedia.facebook}`} target="_blank" rel="noopener noreferrer">
-              <Facebook className="h-6 w-6" />
-            </a>
-            <a href={`https://www.twitter.com/${athlete.socialMedia.twitter}`} target="_blank" rel="noopener noreferrer">
-              <Twitter className="h-6 w-6" />
-            </a>
-          </div>
-        </CardContent>
-      </Card>
+            <h2 className="text-2xl font-semibold mt-6 mb-2 text-bright-red">Biografia</h2>
+            <p>{athlete.bio}</p>
+
+            <h2 className="text-2xl font-semibold mt-6 mb-2 text-bright-red">Gare Recenti</h2>
+            <Table>
+              <TableHeader>
+                <TableRow>
+                  <TableHead>Gara</TableHead>
+                  <TableHead>Risultato</TableHead>
+                  <TableHead>Avversario</TableHead>
+                </TableRow>
+              </TableHeader>
+              <TableBody>
+                {athlete.recentCompetitions.map((comp, index) => (
+                  <TableRow key={index}>
+                    <TableCell>{comp.name}</TableCell>
+                    <TableCell>{comp.result}</TableCell>
+                    <TableCell>{comp.opponent}</TableCell>
+                  </TableRow>
+                ))}
+              </TableBody>
+            </Table>
+
+            <h2 className="text-2xl font-semibold mt-6 mb-2 text-bright-red">Statistiche Tecniche</h2>
+            <Table>
+              <TableBody>
+                <TableRow>
+                  <TableCell className="font-semibold">Submission Preferite</TableCell>
+                  <TableCell>{athlete.techniques.submissions.join(", ")}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-semibold">Takedown Preferiti</TableCell>
+                  <TableCell>{athlete.techniques.takedowns.join(", ")}</TableCell>
+                </TableRow>
+                <TableRow>
+                  <TableCell className="font-semibold">Sweep Preferiti</TableCell>
+                  <TableCell>{athlete.techniques.sweeps.join(", ")}</TableCell>
+                </TableRow>
+              </TableBody>
+            </Table>
+
+            <h2 className="text-2xl font-semibold mt-6 mb-2 text-bright-red">Social Media</h2>
+            <div className="flex space-x-4">
+              <a href={`https://www.instagram.com/${athlete.socialMedia.instagram}`} target="_blank" rel="noopener noreferrer" className="text-bright-red hover:text-white">
+                <Instagram className="h-6 w-6" />
+              </a>
+              <a href={`https://www.facebook.com/${athlete.socialMedia.facebook}`} target="_blank" rel="noopener noreferrer" className="text-bright-red hover:text-white">
+                <Facebook className="h-6 w-6" />
+              </a>
+              <a href={`https://www.twitter.com/${athlete.socialMedia.twitter}`} target="_blank" rel="noopener noreferrer" className="text-bright-red hover:text-white">
+                <Twitter className="h-6 w-6" />
+              </a>
+            </div>
+          </CardContent>
+        </Card>
+      </div>
     </div>
   );
 };
