@@ -6,6 +6,7 @@ const Teams = () => {
   const teams = [
     { name: "Atos Jiu-Jitsu", location: "San Diego, USA", headCoach: "André Galvão" },
     { name: "Alliance", location: "São Paulo, Brazil", headCoach: "Fabio Gurgel" },
+    { name: "New Wave", location: "Austin, Texas", headCoach: "John Danaher" },
     { name: "Gracie Barra", location: "Rio de Janeiro, Brazil", headCoach: "Carlos Gracie Jr." },
   ];
 
