@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import useEmblaCarousel from 'embla-carousel-react';
 
 const competitions = [
   {
@@ -38,20 +37,18 @@ const competitions = [
 ];
 
 const CompetitionStats = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true });
-
   return (
     <Card className="mt-8 relative">
       <CardHeader>
         <CardTitle>Statistiche Vittorie per Competizione</CardTitle>
       </CardHeader>
       <CardContent>
-        <Carousel className="w-full" ref={emblaRef}>
+        <Carousel className="w-full">
           <CarouselContent>
             {competitions.map((competition, index) => (
               <CarouselItem key={index}>
                 <h3 className="text-xl font-semibold mb-4">{competition.name}</h3>
-                <ResponsiveContainer width="100%" height={250}>
+                <ResponsiveContainer width="100%" height={200}>
                   <BarChart data={competition.data}>
                     <XAxis dataKey="name" />
                     <YAxis />
@@ -63,11 +60,11 @@ const CompetitionStats = () => {
               </CarouselItem>
             ))}
           </CarouselContent>
+          <div className="flex justify-center mt-4 space-x-2">
+            <CarouselPrevious />
+            <CarouselNext />
+          </div>
         </Carousel>
-        <div className="flex justify-center mt-4 space-x-2">
-          <CarouselPrevious />
-          <CarouselNext />
-        </div>
       </CardContent>
     </Card>
   );

@@ -8,7 +8,6 @@ import {
   CarouselNext,
   CarouselPrevious,
 } from "@/components/ui/carousel";
-import useEmblaCarousel from 'embla-carousel-react';
 
 const athletes = [
   { id: 1, name: "Gordon Ryan", image: "/gordon-ryan.jpg", wins: 95, losses: 5, team: "New Wave Jiu-Jitsu" },
@@ -25,12 +24,10 @@ const athletes = [
 ];
 
 export const TopAthletes = () => {
-  const [emblaRef] = useEmblaCarousel({ loop: true });
-
   return (
     <div className="w-full h-full relative">
       <h2 className="text-2xl font-bold mb-4 text-red-600">Atleti più ricercati</h2>
-      <Carousel className="w-full h-full" ref={emblaRef}>
+      <Carousel className="w-full h-full">
         <CarouselContent>
           {athletes.map((athlete) => (
             <CarouselItem key={athlete.id} className="md:basis-1/3">
@@ -52,11 +49,11 @@ export const TopAthletes = () => {
             </CarouselItem>
           ))}
         </CarouselContent>
+        <div className="flex justify-center mt-4 space-x-2">
+          <CarouselPrevious />
+          <CarouselNext />
+        </div>
       </Carousel>
-      <div className="flex justify-center mt-4 space-x-2">
-        <CarouselPrevious />
-        <CarouselNext />
-      </div>
     </div>
   );
 };
