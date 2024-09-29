@@ -1,5 +1,5 @@
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Link, useParams } from 'react-router-dom';
 import { NavBar } from '../components/NavBar';
 import { Card, CardHeader, CardTitle, CardContent } from "@/components/ui/card";
 
@@ -49,7 +49,9 @@ const Athletes = () => {
         ) : (
           <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
             {athletesData.map((athlete) => (
-              <AthleteDetails key={athlete.id} athlete={athlete} />
+              <Link key={athlete.id} to={`/athletes/${athlete.id}`}>
+                <AthleteDetails athlete={athlete} />
+              </Link>
             ))}
           </div>
         )}
