@@ -38,7 +38,7 @@ const competitions = [
 
 const CompetitionStats = () => {
   return (
-    <Card className="mt-8 relative">
+    <Card className="mt-8">
       <CardHeader>
         <CardTitle>Statistiche Vittorie per Competizione</CardTitle>
       </CardHeader>
@@ -48,7 +48,7 @@ const CompetitionStats = () => {
             {competitions.map((competition, index) => (
               <CarouselItem key={index}>
                 <h3 className="text-xl font-semibold mb-4">{competition.name}</h3>
-                <ResponsiveContainer width="100%" height={200}>
+                <ResponsiveContainer width="100%" height={150}>
                   <BarChart data={competition.data}>
                     <XAxis dataKey="name" />
                     <YAxis />
